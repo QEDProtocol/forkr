@@ -60,11 +60,26 @@ npm run start a9fa22996770
 
 
 ## Using Forkr
-To create a a resumable copy of a chain at a given point, make an HTTP get request to 
-`http://localhost:1449/createfork/<name of your new fork>?source=<source of the fork>&activate=<1 or 0, depending on if you want to activate it>`
 
 At startup, Forkr creates a fork of the current chain called `default`.
+To create a a resumable copy of a chain at a given point, send an HTTP get request to:
+```text
+curl http://localhost:1449/createfork/<name of your new fork>?source=<source of the fork>&activate=<1 or 0, depending on if you want to activate it>
+````
 
+To activate a forked chain, send an HTTP get request to:
+```bash
+curl http://localhost:1449/activatefork/<name of the fork you want to activate>
+```
+
+To view thes status of Forkr, send an HTTP get request to:
+```bash
+curl https://localhost:1449/status
+```
+
+## Tutorial
+
+#### Creating our first forks
 Let's create two forks of the default chain, **fork1** and **fork2**:
 ```bash
 curl "http://localhost:1449/createfork/fork1?source=default&activate=1"
@@ -86,6 +101,7 @@ As we can see ```currentFork``` is ```fork2```, lets switch back to **fork1**:
 curl "http://localhost:1449/activatefork/fork1"
 ```
 
+#### Generating divergent blocks on fork1 and fork2
 Now that we are on fork1, we can make some transactions using the RPC endpoint http://devnet:devnet@127.0.0.1:1337/bitcoin-rpc/, and we can check them out in the block explorer at http://localhost:1337/explorer/.
 
 These transactions can be ordinal inscriptions/other transactions relevant to your indexer.
@@ -102,6 +118,8 @@ We can now make some transactions on fork2 (Again, these transactions should be 
 For the best simulation of real forking activity, lets mine more blocks than we did on fork1 so it has a higher block height.
 
 
+
+#### Testing your indexer
 Let's switch back to fork1 now:
 ```bash
 curl "http://localhost:1449/activatefork/fork1"
@@ -121,7 +139,6 @@ Now check your indexer and see if it handled the re-org correctly =) 🎉
 
 
 ## License
-MIT
 Copyright 2024 QED
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

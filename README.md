@@ -101,6 +101,9 @@ As we can see ```currentFork``` is ```fork2```, lets switch back to **fork1**:
 curl "http://localhost:1449/activatefork/fork1"
 ```
 
+<br />
+<br />
+
 ### Generating divergent blocks on fork1 and fork2
 Now that we are on fork1, we can make some transactions using the RPC endpoint http://devnet:devnet@127.0.0.1:1337/bitcoin-rpc/, and we can check them out in the block explorer at http://localhost:1337/explorer/.
 
@@ -117,6 +120,9 @@ If we now refresh the block explorer, the new transactions we have made will not
 We can now make some transactions on fork2 (Again, these transactions should be ordinal inscriptions/other transactions relevant to your indexer). 
 For the best simulation of real forking activity, lets mine more blocks than we did on fork1 so it has a higher block height.
 
+
+<br />
+<br />
 
 
 ### Testing your indexer
@@ -137,6 +143,10 @@ curl "http://localhost:1449/activatefork/fork2"
 
 Now check your indexer and see if it handled the re-org correctly =) 🎉
 
+
+
+<br />
+<br />
 
 ## License
 Copyright 2024 QED

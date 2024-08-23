@@ -102,8 +102,6 @@ curl "http://localhost:1449/activatefork/fork1"
 ```
 
 <br />
-<br />
-
 ### Generating divergent blocks on fork1 and fork2
 Now that we are on fork1, we can make some transactions using the RPC endpoint http://devnet:devnet@127.0.0.1:1337/bitcoin-rpc/, and we can check them out in the block explorer at http://localhost:1337/explorer/.
 
@@ -122,8 +120,6 @@ For the best simulation of real forking activity, lets mine more blocks than we 
 
 
 <br />
-<br />
-
 
 ### Testing your indexer
 Let's switch back to fork1 now:
@@ -146,8 +142,6 @@ Now check your indexer and see if it handled the re-org correctly =) 🎉
 
 
 <br />
-<br />
-
 ## License
 Copyright 2024 QED
 

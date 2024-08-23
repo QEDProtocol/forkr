@@ -79,7 +79,7 @@ curl https://localhost:1449/status
 
 ## Tutorial
 
-#### Creating our first forks
+### Creating our first forks
 Let's create two forks of the default chain, **fork1** and **fork2**:
 ```bash
 curl "http://localhost:1449/createfork/fork1?source=default&activate=1"
@@ -101,7 +101,7 @@ As we can see ```currentFork``` is ```fork2```, lets switch back to **fork1**:
 curl "http://localhost:1449/activatefork/fork1"
 ```
 
-#### Generating divergent blocks on fork1 and fork2
+### Generating divergent blocks on fork1 and fork2
 Now that we are on fork1, we can make some transactions using the RPC endpoint http://devnet:devnet@127.0.0.1:1337/bitcoin-rpc/, and we can check them out in the block explorer at http://localhost:1337/explorer/.
 
 These transactions can be ordinal inscriptions/other transactions relevant to your indexer.
@@ -119,7 +119,7 @@ For the best simulation of real forking activity, lets mine more blocks than we 
 
 
 
-#### Testing your indexer
+### Testing your indexer
 Let's switch back to fork1 now:
 ```bash
 curl "http://localhost:1449/activatefork/fork1"

@@ -1,4 +1,6 @@
 <img src= "./static/forkr-logo.png" height="300" alt="Forkr"/>
+
+
 # Forkr
 An easy to use tool for simulating forks/re-orgs on Bitcoin and Dogecoin
 
@@ -6,8 +8,9 @@ An easy to use tool for simulating forks/re-orgs on Bitcoin and Dogecoin
 ## Why is the useful
 For ordinals and other inscription based applications where sequence of inscriptions matter, it is crucial that indexers are able to handle forks in the Bitcoin/Dogecoin blockchains (millions of dollars are on the line).
 
-If you don't handle forks/re-orgs correctly, people will end up with incorrect balances and double spends.
-<img src= "./static/bad-time.png" height="300" alt="if you don't handle forks/re-orgs correctly, your gonna have a bad time" />
+### If you don't handle forks/re-orgs correctly, people will end up with incorrect balances and double spends.
+
+<img src= "./static/bad-time.png" height="280" alt="if you don't handle forks/re-orgs correctly, your gonna have a bad time" />
 
 
 ## Getting Started

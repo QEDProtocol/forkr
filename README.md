@@ -80,10 +80,14 @@ curl https://localhost:1449/status
 ## Tutorial
 
 ### Creating our first forks
+
+
 Let's create two forks of the default chain, **fork1** and **fork2**:
 ```bash
 curl "http://localhost:1449/createfork/fork1?source=default&activate=1"
 ```
+
+
 ```bash
 curl "http://localhost:1449/createfork/fork2?source=default&activate=1"
 ```
@@ -92,16 +96,21 @@ Next, let's check the status of forker by running:
 ```bash
 curl "http://localhost:1449/status"
 ```
+
+
 We should see something like the following:
 ```json
 {"forks":["default","fork1","fork2"],"currentFork":"fork2","isBusy":false,"rpcIsDisabled":false,"rpcIsRunning":true}
 ```
+
+
 As we can see ```currentFork``` is ```fork2```, lets switch back to **fork1**:
 ```bash
 curl "http://localhost:1449/activatefork/fork1"
 ```
 
 <br />
+
 ### Generating divergent blocks on fork1 and fork2
 Now that we are on fork1, we can make some transactions using the RPC endpoint http://devnet:devnet@127.0.0.1:1337/bitcoin-rpc/, and we can check them out in the block explorer at http://localhost:1337/explorer/.
 
@@ -142,6 +151,7 @@ Now check your indexer and see if it handled the re-org correctly =) 🎉
 
 
 <br />
+
 ## License
 Copyright 2024 QED
 
